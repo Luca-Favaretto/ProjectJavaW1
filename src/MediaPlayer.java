@@ -13,6 +13,7 @@ public class MediaPlayer {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Media Player");
+
         Scanner scanner = new Scanner(System.in);
         Multimediale[] multimedia = myArray(scanner);
         try {
@@ -86,7 +87,7 @@ public class MediaPlayer {
                 }
             }
         }
-        System.out.println(Arrays.toString(multimedia));
+
         return multimedia;
     }
 
@@ -99,7 +100,17 @@ public class MediaPlayer {
         int input = 0;
         do {
             try {
-                System.out.println("Inserisci un numero da 1 a 5, 0 se vuoi concludere");
+                if (input == 0) {
+                    System.out.println("Elementi creati");
+                } else {
+                    System.out.println("Elementi modificati");
+
+                }
+
+
+                System.out.println(Arrays.toString(multimedia));
+                System.out.printf("-----------------------------------------------------------------------------------------------------%n" +
+                        "Inserisci un numero da 1 a 5 per  selezionare cosa riprodurre, 0 se vuoi concludere%n");
                 input = scanner.nextInt();
                 scanner.nextLine();
                 selection(input - 1, multimedia, scanner);
@@ -142,7 +153,7 @@ public class MediaPlayer {
                     }
                     System.out.println("Vuoi alzare il volume?true/false");
                     boolean input2 = scanner1.nextBoolean();
-                    if (input1) {
+                    if (input2) {
                         video.plusVol();
                     } else {
                         video.minVol();
