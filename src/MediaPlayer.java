@@ -28,6 +28,10 @@ public class MediaPlayer {
         }
     }
 
+    /**
+     * @param myArray
+     * @return funzione per creare un array dallo scanner
+     */
     static private Multimediale[] myArray(Scanner scanner) {
         Multimediale[] multimedia = new Multimediale[5];
         for (int p = 0; p < 5; p++) {
@@ -86,6 +90,11 @@ public class MediaPlayer {
         return multimedia;
     }
 
+    /**
+     * @param loop
+     * @return funzione che continua a chiedere all'utente dati per osservare il funzionamento dell'aplicazione
+     */
+
     static private void loop(Scanner scanner, Multimediale[] multimedia) {
         int input = 0;
         do {
@@ -100,6 +109,11 @@ public class MediaPlayer {
             }
         } while (input != 0);
     }
+
+    /**
+     * @param selection
+     * @return funzione che definisce il tipo di oggetto multimediale entrato
+     */
 
     static private void selection(int num, Multimediale[] array, Scanner scanner1) {
         if (num != -1) {
