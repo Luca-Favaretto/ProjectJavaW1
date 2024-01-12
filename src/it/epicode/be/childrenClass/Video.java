@@ -104,7 +104,7 @@ public class Video extends Multimediale implements Riproduzione, Luminosita {
 
     @Override
     public String toString() {
-        return "Audio{" +
+        return "Video{" +
                 "titolo=" + getTitolo() +
                 ", durata=" + getDurata() +
                 ", volume=" + getVolume() +

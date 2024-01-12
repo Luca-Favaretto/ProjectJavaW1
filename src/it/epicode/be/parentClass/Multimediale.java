@@ -26,4 +26,11 @@ public abstract class Multimediale {
         this.titolo = titolo;
     }
 
+    @Override
+    public String toString() {
+        return "Multimediale{" +
+                "titolo='" + titolo + '\'' +
+                ", file=" + file +
+                '}';
+    }
 }
